@@ -139,26 +139,36 @@
       background: rgba(250,248,244,.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--tan);
-      height: var(--nav-h);
+      padding: .75rem 0 .6rem;
     }
     #site-header .container {
-      height: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+      justify-content: center;
+      gap: .5rem;
+      position: relative;
     }
     .nav-brand {
       display: inline-flex;
-      align-items: center;
-      flex-shrink: 0;
+      align-items: baseline;
+      gap: .45rem;
       text-decoration: none;
     }
     .nav-brand:hover { text-decoration: none; }
+    .nav-brand .brand-title {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-muted);
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
     .nav-brand .brand-name {
       font-family: 'Lora', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--sage);
       white-space: nowrap;
       letter-spacing: .01em;
@@ -169,6 +179,8 @@
       margin: 0;
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: .15rem;
     }
     #main-nav li { margin: 0; }
@@ -223,10 +235,15 @@
     #nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     @media (max-width: 780px) {
-      #nav-toggle { display: flex; }
+      #nav-toggle {
+        display: flex;
+        position: absolute;
+        top: .75rem;
+        right: 1.25rem;
+      }
       #main-nav {
         position: absolute;
-        top: var(--nav-h);
+        top: 100%;
         left: 0; right: 0;
         background: rgba(250,248,244,.98);
         border-bottom: 1px solid var(--tan);
@@ -234,7 +251,7 @@
         display: none;
       }
       #main-nav.open { display: block; }
-      #main-nav ul { flex-direction: column; gap: .1rem; }
+      #main-nav ul { flex-direction: column; gap: .1rem; justify-content: flex-start; }
       #main-nav button[role="tab"] { font-size: 1rem; padding: .55rem .75rem; width: 100%; text-align: left; }
     }
 
@@ -692,8 +709,9 @@
 ════════════════════════════════════════════════ -->
 <header id="site-header">
   <div class="container">
-    <a class="nav-brand" href="#seminare" data-tab="seminare">
-      <span class="brand-name">Dipl.-Psychologin Andrea Englisch</span>
+    <a class="nav-brand" href="#tab=seminare" data-tab="seminare">
+      <span class="brand-title">Dipl.-Psychologin</span>
+      <span class="brand-name">Andrea Englisch</span>
     </a>
     <button id="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
@@ -1510,6 +1528,8 @@
      SCRIPT: tabbed interface + hamburger menu
 ════════════════════════════════════════════════ -->
 <script>
+  if (history.scrollRestoration) history.scrollRestoration = 'manual';
+
   const toggle   = document.getElementById('nav-toggle');
   const navEl    = document.getElementById('main-nav');
   const tabs     = Array.from(document.querySelectorAll('[role="tab"]'));
@@ -1535,8 +1555,8 @@
       activeTab.tabIndex = 0;
     }
 
-    // Update URL hash without triggering a scroll
-    history.replaceState(null, '', '#' + id);
+    // Update URL hash using a non-element key so the browser never anchor-scrolls
+    history.replaceState(null, '', '#tab=' + id);
 
     // Scroll window to top when switching tabs
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -1590,7 +1610,7 @@
   });
 
   /* ── Initialise from URL hash or default to Willkommen ─────── */
-  const initial = (location.hash.slice(1)) || 'seminare';
+  const initial = (location.hash.startsWith('#tab=') ? location.hash.slice(5) : location.hash.slice(1)) || 'seminare';
   showTab(initial);
   // Make the active tab reachable by keyboard (roving tabindex)
   const firstActive = tabs.find(t => t.getAttribute('aria-selected') === 'true');
