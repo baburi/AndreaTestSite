@@ -373,6 +373,17 @@
       padding: .2rem .75rem;
       margin-top: .7rem;
     }
+    .seminar-body .wait {
+      display: block;
+      font-size: .85rem;
+      color: var(--text-muted);
+      margin-top: .5rem;
+    }
+    .seminar-loading, .seminar-error {
+      color: var(--text-muted);
+      font-size: .95rem;
+      padding: 1rem 0;
+    }
     @media (max-width: 540px) {
       .seminar-card { grid-template-columns: 1fr; }
       .seminar-date-block { display: flex; gap: .4rem; align-items: baseline; }
@@ -883,204 +894,8 @@
       Fachleuten. Anmeldungen nehme ich ab sofort entgegen.
       Geschenkgutscheine für alle Seminare sind ebenfalls erhältlich.
     </p>
-    <div class="seminar-list">
-
-      <!-- 1: Schuld oder Unschuld -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">11.–12.</div>
-          <div class="month">April</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Schuld oder Unschuld?</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Andrea Englisch &amp; Grit Wiegandt (Sozialpädagogin, Kunsttherapeutin)<br>
-            <strong>Ort:</strong> Polenzstraße 3, Dresden
-          </p>
-          <p>
-            Schuld ist für viele Menschen ein großes Thema. Wir schauen uns zusammen an, wo
-            wir tatsächlich Schuld auf uns geladen haben und dieser begegnen können, indem
-            wir Verantwortung übernehmen – und wo wir keine Schuld tragen und sie auflösen
-            können. Viel Raum für Austausch, kreative Bearbeitung und Transformationsübungen.
-          </p>
-          <span class="seminar-price">auf Spendenbasis · Empfehlung 280 €</span>
-        </div>
-      </div>
-
-      <!-- 2: GfK Einführung Mai -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">30.–31.</div>
-          <div class="month">Mai</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Einführung in die Gewaltfreie Kommunikation</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Sebastian Rochau (Dipl.-Ingenieur, GfK-Trainer)<br>
-            <strong>Ort:</strong> Polenzstraße 3, Dresden
-          </p>
-          <p>
-            Gut kommunizieren zu können macht das Leben leichter, die Beziehungen schöner
-            und hilft bei der Erfüllung von Bedürfnissen. Nach einer kurzen Einführung lernen
-            und üben wir die 4 Schritte der Methode von Marshall Rosenberg spielerisch an
-            eigenen Beispielen.
-          </p>
-          <span class="seminar-price">250 €</span>
-        </div>
-      </div>
-
-      <!-- 3: Freude -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">12.–14.</div>
-          <div class="month">Juni</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Freude 🙂</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Andrea Englisch &amp; Katrin Schäfer (Logopädin, systemische Coachin)<br>
-            <strong>Ort:</strong> Forsthaus Graupa
-          </p>
-          <p>
-            Von Freitag bis Sonntag widmen wir uns dem Thema Lebensfreude: gemeinsamer
-            Einstieg, Einzelarbeit, Stimmübungen und die Methode The Work, um Glaubenssätze
-            zu untersuchen, die uns am Erleben von Freude hindern.
-          </p>
-          <span class="seminar-price">auf Spendenbasis · Empfehlung 320 €</span>
-        </div>
-      </div>
-
-      <!-- 4: GfK Einführung Juni -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">27.–28.</div>
-          <div class="month">Juni</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Einführung in die Gewaltfreie Kommunikation</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Sebastian Rochau (Dipl.-Ingenieur, GfK-Trainer)<br>
-            <strong>Ort:</strong> Polenzstraße 3, Dresden
-          </p>
-          <p>
-            Zweiter Termin der GfK-Einführung. Die 4 Schritte der Gewaltfreien Kommunikation
-            nach Marshall Rosenberg – spielerisch an eigenen Beispielen geübt.
-          </p>
-          <span class="seminar-price">250 €</span>
-        </div>
-      </div>
-
-      <!-- 5: Bewegung und Stille -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">10.–11.</div>
-          <div class="month">Okt.</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Bewegung und Stille</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Andrea Englisch &amp; Jana Stolz (Dipl.-Ingenieurin, Nordic-Walking-Trainerin)<br>
-            <strong>Ort:</strong> Großer Garten, Dresden
-          </p>
-          <p>
-            Studien zeigen, dass Sport bei Ängsten und Depressionen ebenso wirksam sein kann
-            wie Psychotherapie oder Medikamente. Wir verbringen dieses Wochenende draußen in
-            der Natur mit abwechselnd schneller (Nordic Walking) und geruhsamer Bewegung
-            (Feldenkrais). Auch mit körperlichen Beeinträchtigungen möglich.
-          </p>
-          <span class="seminar-price">auf Spendenbasis · Empfehlung 250 €</span>
-        </div>
-      </div>
-
-      <!-- 6: Herzmeditation -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">17.–18.</div>
-          <div class="month">Okt.</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Herzmeditation und Leichtigkeit</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Andrea Englisch &amp; Lisa Macketanz (Meditationslehrerin)<br>
-            <strong>Ort:</strong> Polenzstraße 3, Dresden
-          </p>
-          <p>
-            Stille, Bewegung, Meditation, Trancereise, Feldenkrais, Achtsamkeitsübungen,
-            Chakrenarbeit, Reinigung – an diesem Wochenende entspannen wir tief, nehmen
-            unsere Körper wahr und kehren gestärkt in den Alltag zurück.
-            Für Anfänger*innen und Erfahrene geeignet.
-          </p>
-          <span class="seminar-price">auf Spendenbasis · Empfehlung 300 €</span>
-        </div>
-      </div>
-
-      <!-- 7: GfK Vertiefung Empathie -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">14.–15.</div>
-          <div class="month">Nov.</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Vertiefungsseminar Empathie – Gewaltfreie Kommunikation</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Sebastian Rochau (Dipl.-Ingenieur, GfK-Trainer)<br>
-            <strong>Ort:</strong> Polenzstraße 3, Dresden
-          </p>
-          <p>
-            Um selbstwertschätzend mit uns umzugehen, müssen wir unsere eigenen Gefühle und
-            Bedürfnisse kennen und liebevoll annehmen. Wir üben Empathie – zunächst mit uns
-            selbst, dann mit anderen. Das bringt mehr Verständnis in Beziehungen und
-            unterstützt das Gegenüber bei der Lösung unterschiedlichster Problemlagen.
-          </p>
-          <span class="seminar-price">250 €</span>
-        </div>
-      </div>
-
-      <!-- 8: Glückliche Paarbeziehungen -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">4.–5.</div>
-          <div class="month">Dez.</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Glückliche Paarbeziehungen</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Andrea Englisch &amp; Christin Kulling (Kommunikationspsychologin, Körpertherapeutin i. A.)<br>
-            <strong>Ort:</strong> Polenzstraße 3, Dresden
-          </p>
-          <p>
-            Dieses Seminar richtet sich an glückliche Paare, die auch langfristig glücklich
-            miteinander bleiben wollen – nicht an Paare in einer akuten Krise. Wir widmen
-            uns der Beziehungspflege und üben Kommunikationstechniken, die Alltagskonflikte
-            lösen und Verständnis sowie Liebe vertiefen.
-          </p>
-          <span class="seminar-price">400 € / Paar</span>
-        </div>
-      </div>
-
-      <!-- 9: Spielend ins Neue Jahr -->
-      <div class="seminar-card">
-        <div class="seminar-date-block">
-          <div class="day">29.12.–2.1.</div>
-          <div class="month">&nbsp;</div>
-        </div>
-        <div class="seminar-body">
-          <h3>Spielend ins Neue Jahr</h3>
-          <p class="seminar-meta">
-            <strong>Leitung:</strong> Andrea Englisch &amp; Jens Seidel (Programmierer, Spielleiter)<br>
-            <strong>Ort:</strong> Kloster Marienthal
-          </p>
-          <p>
-            Spielen macht glücklich – viele Tage mit vielen anderen zusammen zu spielen
-            macht richtig glücklich! Wir begehen den Jahreswechsel in wunderschöner
-            Umgebung mit vielen Spielrunden für Groß und Klein, Kennlernrunden,
-            Spielanleitungen, einem Turnier, leckerem Essen und ausreichend Freizeit.
-          </p>
-          <span class="seminar-price">auf Spendenbasis · Empfehlung 580 €</span>
-          <span class="wait">zzgl. Übernachtung und Verpflegung vor Ort</span>
-        </div>
-      </div>
-
+    <div class="seminar-list" id="seminar-list" aria-live="polite">
+      <p class="seminar-loading">Seminare werden geladen …</p>
     </div>
 
     <div style="margin-top:2rem; padding:1.25rem 1.5rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
@@ -1609,6 +1424,87 @@
   // Make the active tab reachable by keyboard (roving tabindex)
   const firstActive = tabs.find(t => t.getAttribute('aria-selected') === 'true');
   if (firstActive) firstActive.tabIndex = 0;
+
+  /* ── Seminare loader (reads seminare.md at runtime) ─────────── */
+  // NOTE: requires HTTP server — open via 'python -m http.server 8765', not file://
+  (function loadSeminare() {
+    const list = document.getElementById('seminar-list');
+    if (!list) return;
+
+    function esc(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function parseBlocks(text) {
+      // Split on lines containing only ---; drop empty chunks
+      return text
+        .split(/\n---\n/)
+        .map(b => b.trim())
+        .filter(b => b.length > 0 && !b.startsWith('[//]:'));
+    }
+
+    function parseEntry(block) {
+      const lines = block.split('\n');
+      const fields = {};
+      let bodyStart = lines.length;
+      for (let i = 0; i < lines.length; i++) {
+        const m = lines[i].match(/^([a-z]+):\s*(.*)$/);
+        if (m) {
+          fields[m[1]] = m[2].trim();
+        } else {
+          bodyStart = i + 1; // skip the blank separator line
+          break;
+        }
+      }
+      fields.description = lines.slice(bodyStart).join(' ').trim();
+      return fields;
+    }
+
+    function buildCard(f) {
+      const month = f.month ? esc(f.month) : '&nbsp;';
+      const note = f.note
+        ? `<span class="wait">${esc(f.note)}</span>`
+        : '';
+      return `
+        <div class="seminar-card">
+          <div class="seminar-date-block">
+            <div class="day">${esc(f.day || '')}</div>
+            <div class="month">${month}</div>
+          </div>
+          <div class="seminar-body">
+            <h3>${esc(f.title || '')}</h3>
+            <p class="seminar-meta">
+              <strong>Leitung:</strong> ${esc(f.leitung || '')}<br>
+              <strong>Ort:</strong> ${esc(f.ort || '')}
+            </p>
+            <p>${esc(f.description || '')}</p>
+            <span class="seminar-price">${esc(f.price || '')}</span>
+            ${note}
+          </div>
+        </div>`;
+    }
+
+    fetch('seminare.md', { cache: 'no-store' })
+      .then(r => {
+        if (!r.ok) throw new Error(r.status);
+        return r.text();
+      })
+      .then(text => {
+        // Normalise CRLF → LF so the parser works on any OS
+        const cards = parseBlocks(text.replace(/\r\n/g, '\n'))
+          .map(parseEntry)
+          .map(buildCard)
+          .join('');
+        list.innerHTML = cards || '<p class="seminar-error">Keine Seminare gefunden.</p>';
+      })
+      .catch(() => {
+        list.innerHTML = '<p class="seminar-error">Seminare konnten nicht geladen werden. Bitte Seite neu laden.</p>';
+      });
+  })();
 </script>
 </body>
 </html>
