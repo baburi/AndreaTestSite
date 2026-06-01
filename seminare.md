@@ -33,7 +33,7 @@ month: Juni
 title: Freude 🙂
 leitung: Andrea Englisch & Katrin Schäfer (Logopädin, systemische Coachin)
 ort: Forsthaus Graupa
-price: auf Spendenbasis · Empfehlung 325 €
+price: auf Spendenbasis · Empfehlung 320 €
 
 Von Freitag bis Sonntag widmen wir uns dem Thema Lebensfreude: gemeinsamer Einstieg, Einzelarbeit, Stimmübungen und die Methode The Work, um Glaubenssätze zu untersuchen, die uns am Erleben von Freude hindern.
 ---
